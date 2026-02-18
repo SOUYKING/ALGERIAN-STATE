@@ -26,6 +26,7 @@
       --gray: #2a2a35;
       --text-gray: #b0b0c0;
       --discord: #5865F2;
+      --success: #00ff88;
     }
 
     ::-webkit-scrollbar { width: 8px; }
@@ -53,56 +54,6 @@
     @keyframes gridMove {
       0% { transform: translateY(0); }
       100% { transform: translateY(60px); }
-    }
-
-    .dev-watermark {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: rgba(21, 21, 31, 0.85);
-      backdrop-filter: blur(8px);
-      padding: 12px 20px;
-      border-radius: 40px;
-      border: 1px solid var(--primary);
-      color: #fff;
-      font-size: 14px;
-      font-weight: 600;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 10px 30px rgba(155, 77, 255, 0.2);
-      pointer-events: none;
-    }
-    .dev-watermark i {
-      color: var(--primary);
-      font-size: 18px;
-    }
-    .dev-watermark span {
-      color: var(--primary);
-      font-weight: 800;
-    }
-
-    .demo-badge {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      background: rgba(255, 77, 77, 0.2);
-      backdrop-filter: blur(8px);
-      padding: 8px 16px;
-      border-radius: 40px;
-      border: 1px solid #ff4d4d;
-      color: #ff4d4d;
-      font-size: 13px;
-      font-weight: 700;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      letter-spacing: 0.5px;
-    }
-    .demo-badge i {
-      font-size: 14px;
     }
 
     .container {
@@ -169,7 +120,7 @@
       background: transparent;
       border: none;
       color: #fff;
-      padding: 10px 14px;
+      padding: 10px 18px;
       border-radius: 40px;
       font-weight: 600;
       cursor: pointer;
@@ -199,7 +150,7 @@
       font-weight: 700;
       cursor: pointer;
       transition: 0.25s;
-      padding: 11px 16px;
+      padding: 11px 20px;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -208,8 +159,8 @@
     }
     .discord-btn { background: var(--discord); color: #fff; box-shadow: 0 5px 20px rgba(88, 101, 242, 0.35); }
     .discord-btn:hover { transform: translateY(-1px) scale(1.03); background: #4752c4; }
-    .login-btn { background: rgba(155, 77, 255, 0.14); color: #fff; border: 1px solid rgba(155, 77, 255, 0.35); }
-    .login-btn:hover { transform: translateY(-1px); background: rgba(155, 77, 255, 0.22); }
+    .join-btn { background: var(--primary); color: #fff; box-shadow: 0 5px 20px var(--primary-glow); }
+    .join-btn:hover { transform: translateY(-1px) scale(1.03); background: var(--primary-dark); }
 
     .page-title {
       text-align: center;
@@ -228,22 +179,6 @@
       font-size: 16px;
       max-width: 900px;
       margin: 0 auto;
-    }
-
-    .demo-note {
-      background: rgba(155, 77, 255, 0.08);
-      border: 1px dashed var(--primary);
-      border-radius: 40px;
-      padding: 10px 20px;
-      margin: 15px auto;
-      max-width: 800px;
-      text-align: center;
-      color: var(--text-gray);
-      font-size: 14px;
-    }
-    .demo-note i {
-      color: var(--primary);
-      margin-right: 8px;
     }
 
     .glass {
@@ -387,14 +322,14 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 10px 14px;
+      padding: 10px 16px;
       border-radius: 999px;
       border: 1px solid rgba(155, 77, 255, 0.22);
       background: rgba(10,10,15,0.25);
     }
     .dot {
       width: 10px; height: 10px; border-radius: 50%;
-      background: #00ff88;
+      background: var(--success);
       box-shadow: 0 0 12px rgba(0,255,136,0.35);
       animation: pulse 1.5s infinite;
     }
@@ -454,39 +389,6 @@
     }
     .command-item p { color: #fff; margin-top: 8px; font-size: 12.5px; }
 
-    .grid-4 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      margin: 25px 0 10px;
-    }
-    .profile-card {
-      padding: 22px;
-      border-radius: 22px;
-      border: 1px solid rgba(155, 77, 255, 0.18);
-      background: rgba(21, 21, 31, 0.72);
-      transition: 0.25s;
-    }
-    .profile-card:hover { transform: translateY(-5px); border-color: rgba(155, 77, 255, 0.55); }
-    .profile-top {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 14px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(155, 77, 255, 0.18);
-    }
-    .avatar {
-      width: 52px; height: 52px; border-radius: 16px;
-      background: rgba(155, 77, 255, 0.16);
-      display: grid; place-items: center;
-      color: var(--primary);
-      font-weight: 900;
-      box-shadow: 0 0 18px rgba(155,77,255,0.15);
-      flex: 0 0 auto;
-    }
-    .pname { font-weight: 900; font-size: 16.5px; }
-    .prole { color: var(--text-gray); font-size: 12.5px; margin-top: 2px; }
     .badge {
       display: inline-flex;
       align-items: center;
@@ -500,146 +402,6 @@
       width: fit-content;
     }
     .badge i { color: var(--primary); }
-
-    .price {
-      font-size: 22px;
-      font-weight: 900;
-      color: var(--primary);
-      margin-top: 10px;
-    }
-    .buy-btn {
-      margin-top: 14px;
-      width: 100%;
-      border: none;
-      border-radius: 16px;
-      padding: 12px 14px;
-      background: rgba(155, 77, 255, 0.14);
-      color: #fff;
-      font-weight: 900;
-      cursor: pointer;
-      transition: 0.25s;
-      border: 1px solid rgba(155, 77, 255, 0.30);
-    }
-    .buy-btn:hover { background: rgba(155, 77, 255, 0.24); transform: translateY(-1px); }
-
-    .dash {
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 18px;
-      margin-top: 25px;
-    }
-    .dash-col { display: grid; gap: 18px; }
-    .widget { padding: 22px; border-radius: 22px; border: 1px solid rgba(155, 77, 255, 0.18); background: rgba(21, 21, 31, 0.72); }
-    .widget h3 { font-size: 15px; font-weight: 900; margin-bottom: 12px; color: #fff; display: flex; gap: 10px; align-items: center; }
-    .widget h3 i { color: var(--primary); }
-    .kpi-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-    .kpi {
-      padding: 14px;
-      border-radius: 18px;
-      border: 1px solid rgba(155, 77, 255, 0.18);
-      background: rgba(0,0,0,0.18);
-    }
-    .kpi .k { font-size: 12px; color: var(--text-gray); }
-    .kpi .v { font-size: 18px; font-weight: 900; color: var(--primary); margin-top: 3px; }
-
-    .timeline { display: grid; gap: 10px; }
-    .event {
-      display: flex; gap: 12px; align-items: flex-start;
-      padding: 12px;
-      border-radius: 16px;
-      background: rgba(0,0,0,0.18);
-      border: 1px solid rgba(155, 77, 255, 0.14);
-    }
-    .event .eicon {
-      width: 36px; height: 36px; border-radius: 14px;
-      background: rgba(155, 77, 255, 0.14);
-      display: grid; place-items: center;
-      color: var(--primary);
-      flex: 0 0 auto;
-    }
-    .event .etitle { font-weight: 900; font-size: 13.5px; }
-    .event .edesc { color: var(--text-gray); font-size: 12.5px; margin-top: 2px; }
-
-    .form-wrap {
-      max-width: 900px;
-      margin: 25px auto 10px;
-      padding: 26px;
-      border-radius: 24px;
-      border: 1px solid rgba(155, 77, 255, 0.18);
-      background: rgba(21, 21, 31, 0.72);
-    }
-    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
-    .field { display: grid; gap: 8px; }
-    .field label { font-size: 12.5px; color: var(--text-gray); }
-    .field input, .field select, .field textarea {
-      background: rgba(0,0,0,0.25);
-      border: 1px solid rgba(155, 77, 255, 0.18);
-      border-radius: 14px;
-      padding: 12px 12px;
-      color: #fff;
-      outline: none;
-      transition: 0.2s;
-      font-family: "Poppins", sans-serif;
-      font-size: 14px;
-    }
-    .field textarea { min-height: 120px; resize: vertical; grid-column: 1 / -1; }
-    .field input:focus, .field select:focus, .field textarea:focus { border-color: rgba(155, 77, 255, 0.55); }
-    .form-actions { margin-top: 16px; display: flex; gap: 12px; flex-wrap: wrap; }
-    .submit-btn {
-      background: var(--primary);
-      border: none;
-      padding: 12px 18px;
-      border-radius: 16px;
-      font-weight: 900;
-      color: #fff;
-      cursor: pointer;
-      transition: 0.25s;
-      box-shadow: 0 10px 24px var(--primary-glow);
-    }
-    .submit-btn:hover { transform: translateY(-1px) scale(1.02); }
-    .ghost-btn {
-      background: rgba(155, 77, 255, 0.14);
-      border: 1px solid rgba(155, 77, 255, 0.30);
-      padding: 12px 18px;
-      border-radius: 16px;
-      font-weight: 900;
-      color: #fff;
-      cursor: pointer;
-      transition: 0.25s;
-    }
-    .ghost-btn:hover { background: rgba(155, 77, 255, 0.22); transform: translateY(-1px); }
-    .hint { margin-top: 10px; color: var(--text-gray); font-size: 12.5px; }
-
-    .faq {
-      max-width: 1000px;
-      margin: 20px auto 0;
-      display: grid;
-      gap: 12px;
-    }
-    .faq-item {
-      padding: 18px;
-      border-radius: 18px;
-      border: 1px solid rgba(155, 77, 255, 0.18);
-      background: rgba(21, 21, 31, 0.72);
-    }
-    .faq-q {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      gap: 10px;
-      font-weight: 900;
-    }
-    .faq-q span { color: #fff; }
-    .faq-q i { color: var(--primary); transition: 0.25s; }
-    .faq-a {
-      margin-top: 10px;
-      color: var(--text-gray);
-      font-size: 14px;
-      display: none;
-    }
-    .faq-item.open .faq-a { display: block; }
-    .faq-item.open .faq-q i { transform: rotate(180deg); }
 
     footer {
       margin-top: 70px;
@@ -689,7 +451,7 @@
     .modal.open { display: flex; }
     .modal-card {
       width: 100%;
-      max-width: 560px;
+      max-width: 860px;
       border-radius: 22px;
       border: 1px solid rgba(155, 77, 255, 0.25);
       background: rgba(21, 21, 31, 0.92);
@@ -724,13 +486,11 @@
     }
     .close-x:hover { transform: scale(1.05); border-color: rgba(155, 77, 255, 0.40); }
     .modal-body p { color: var(--text-gray); font-size: 14px; }
-    .modal-actions { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; }
-    .btn-wide { width: 100%; justify-content: center; }
 
     .video-wrap {
       width: 100%;
       aspect-ratio: 16/9;
-      background: rgba(0,0,0,0.30);
+      background: #000;
       border-radius: 16px;
       border: 1px solid rgba(155, 77, 255, 0.18);
       overflow: hidden;
@@ -745,15 +505,11 @@
       .header-actions { min-width: unset; }
       .hero h1 { font-size: 34px; }
       .page-title h1 { font-size: 30px; }
-      .dash { grid-template-columns: 1fr; }
-      .kpi-row { grid-template-columns: 1fr; }
-      .form-grid { grid-template-columns: 1fr; }
-      .dev-watermark { bottom: 10px; right: 10px; font-size: 12px; padding: 8px 14px; }
     }
     @media (max-width: 560px) {
       .container { padding: 14px; }
       .nav-btn { padding: 9px 12px; font-size: 13px; }
-      .action-btn { padding: 10px 12px; font-size: 13px; }
+      .action-btn { padding: 10px 14px; font-size: 13px; }
       .rules-grid { grid-template-columns: 1fr; }
       .commands-grid { grid-template-columns: 1fr 1fr; }
       .hero { padding: 22px; }
@@ -764,13 +520,6 @@
   </style>
 </head>
 <body>
-  <div class="dev-watermark">
-    <i class="fas fa-code"></i> dev by <span>souy</span>
-  </div>
-  <div class="demo-badge">
-    <i class="fas fa-flask"></i> DEMO VERSION
-  </div>
-
   <div class="bg-particles"></div>
   <div class="bg-grid"></div>
 
@@ -793,16 +542,11 @@
         <button class="nav-btn" data-page="robbery" onclick="showPage('robbery', this)"><i class="fas fa-money-bill"></i> Robbery</button>
         <button class="nav-btn" data-page="stream" onclick="showPage('stream', this)"><i class="fas fa-video"></i> Stream</button>
         <button class="nav-btn" data-page="commands" onclick="showPage('commands', this)"><i class="fas fa-terminal"></i> Commands</button>
-        <button class="nav-btn" data-page="staff" onclick="showPage('staff', this)"><i class="fas fa-user-shield"></i> Staff</button>
-        <button class="nav-btn" data-page="apply" onclick="showPage('apply', this)"><i class="fas fa-file-signature"></i> Apply</button>
-        <button class="nav-btn" data-page="store" onclick="showPage('store', this)"><i class="fas fa-store"></i> Store</button>
-        <button class="nav-btn" data-page="dashboard" onclick="showPage('dashboard', this)"><i class="fas fa-chart-line"></i> Dashboard</button>
-        <button class="nav-btn" data-page="faq" onclick="showPage('faq', this)"><i class="fas fa-circle-question"></i> FAQ</button>
       </div>
 
       <div class="header-actions">
-        <button class="action-btn login-btn" onclick="openModal('discordLoginModal')">
-          <i class="fa-brands fa-discord"></i> Login
+        <button class="action-btn join-btn" onclick="joinServer()">
+          <i class="fas fa-play"></i> Join Server
         </button>
         <button class="action-btn discord-btn" onclick="window.open('https://discord.gg/2KQSrDYEGE', '_blank')">
           <i class="fab fa-discord"></i> Discord
@@ -810,29 +554,24 @@
       </div>
     </header>
 
-    <div class="demo-note">
-      <i class="fas fa-info-circle"></i> This is a demo website for portfolio purposes. All functionality shown can be fully integrated with Discord API, FiveM server status, and payment systems.
-    </div>
-
     <section id="page-home" class="page active">
       <div class="hero">
         <h1>Algerian State Roleplay</h1>
         <p>
-          Premium FiveM experience: serious RP, custom scripts, active staff, balanced economy, and a strong DZ community.
-          This frontend demo showcases what can be built with Discord login, live server status, player dashboard, and more.
+          Experience the most immersive FiveM roleplay server in Algeria. Serious RP, custom scripts, active staff, and a growing community.
         </p>
 
         <div class="hero-actions">
-          <button class="cta cta-primary" onclick="copyConnect()"><i class="fas fa-play"></i> Copy Connect</button>
+          <button class="cta cta-primary" onclick="joinServer()"><i class="fas fa-play"></i> Join Server</button>
           <button class="cta cta-secondary" onclick="openModal('trailerModal')"><i class="fas fa-film"></i> Watch Trailer</button>
           <button class="cta cta-discord" onclick="window.open('https://discord.gg/2KQSrDYEGE','_blank')"><i class="fab fa-discord"></i> Join Discord</button>
         </div>
 
         <div class="hero-bar">
-          <div class="pill"><span class="dot"></span> <span>Server Online</span></div>
+          <div class="pill"><span class="dot"></span> <span id="serverStatus">Online</span></div>
+          <div class="pill"><i class="fas fa-users" style="color:var(--primary)"></i> Players: <strong id="serverPlayers">0/128</strong></div>
           <div class="pill"><i class="fas fa-signal" style="color:var(--primary)"></i> Ping: <strong id="serverPing">32ms</strong></div>
-          <div class="pill"><i class="fas fa-globe" style="color:var(--primary)"></i> Language: <strong>Arabic / English</strong></div>
-          <div class="pill"><i class="fas fa-location-dot" style="color:var(--primary)"></i> Region: <strong>EU</strong></div>
+          <div class="pill"><i class="fas fa-globe" style="color:var(--primary)"></i> Language: <strong>العربية / English</strong></div>
         </div>
       </div>
 
@@ -844,12 +583,12 @@
         </div>
         <div class="stat-card">
           <i class="fas fa-code"></i>
-          <div class="stat-number" id="statScripts">0</div>
+          <div class="stat-number" id="statScripts">25+</div>
           <div class="stat-label">Custom Scripts</div>
         </div>
         <div class="stat-card">
           <i class="fas fa-shield-alt"></i>
-          <div class="stat-number" id="statStaff">0</div>
+          <div class="stat-number" id="statStaff">24/7</div>
           <div class="stat-label">Staff Online</div>
         </div>
       </div>
@@ -867,7 +606,6 @@
             <li><i class="fas fa-check-circle"></i> <strong>Gangs</strong> & Turf Wars</li>
             <li><i class="fas fa-check-circle"></i> <strong>Heists</strong> (Banks + Yacht)</li>
           </ul>
-          <div class="badge"><i class="fas fa-bolt"></i> Ready for Discord sync</div>
         </div>
 
         <div class="rule-card glass">
@@ -881,7 +619,6 @@
             <li><i class="fas fa-circle"></i> <strong>New Life Rule</strong> - forget after death</li>
             <li><i class="fas fa-circle"></i> <strong>Respect</strong> all players & staff</li>
           </ul>
-          <div class="badge"><i class="fas fa-file-lines"></i> Full rules in pages</div>
         </div>
 
         <div class="rule-card glass">
@@ -890,12 +627,11 @@
             <h2>Server Info</h2>
           </div>
           <ul class="rule-list">
-            <li><i class="fas fa-tag"></i> <strong>Connect:</strong> <span id="connectString">connect 31.56.120.253</span></li>
+            <li><i class="fas fa-tag"></i> <strong>Connect:</strong> <span id="connectString">jjgk3l</span></li>
             <li><i class="fas fa-clock"></i> <strong>Uptime:</strong> 99.9%</li>
-            <li><i class="fas fa-people-group"></i> <strong>Community:</strong> Active & moderated</li>
-            <li><i class="fab fa-discord"></i> <strong>Discord:</strong> discord.gg/2KQSrDYEGE</li>
+            <li><i class="fas fa-calendar"></i> <strong>Season:</strong> S2.5</li>
+            <li><i class="fas fa-map-pin"></i> <strong>Location:</strong> Algeria</li>
           </ul>
-          <div class="badge"><i class="fas fa-lock"></i> Can add login + dashboard</div>
         </div>
       </div>
     </section>
@@ -903,7 +639,7 @@
     <section id="page-roleplay" class="page">
       <div class="page-title">
         <h1>📖 Roleplay Terms & Rules</h1>
-        <p>Essential terminology for quality roleplay (demo content).</p>
+        <p>Essential terminology for quality roleplay</p>
       </div>
 
       <div class="rules-grid">
@@ -951,7 +687,7 @@
     <section id="page-illegal" class="page">
       <div class="page-title">
         <h1>⚡ Illegal Activities</h1>
-        <p>Gangs, robbery, kidnapping & murder rules (demo content).</p>
+        <p>Gangs, robbery, kidnapping & murder rules</p>
       </div>
 
       <div class="rules-grid">
@@ -1011,7 +747,7 @@
     <section id="page-robbery" class="page">
       <div class="page-title">
         <h1>💰 Heists & Robberies</h1>
-        <p>Specific requirements for each heist (demo content).</p>
+        <p>Specific requirements for each heist</p>
       </div>
 
       <div class="rules-grid">
@@ -1056,7 +792,7 @@
     <section id="page-stream" class="page">
       <div class="page-title">
         <h1>🎥 Streamer Rules</h1>
-        <p>Guidelines for content creators (demo content).</p>
+        <p>Guidelines for content creators</p>
       </div>
 
       <div class="rules-grid">
@@ -1064,11 +800,11 @@
           <div class="card-header"><i class="fas fa-stream"></i><h2>Streamer Guidelines</h2></div>
           <ul class="rule-list">
             <li><i class="fas fa-circle"></i> You represent the server — avoid toxicity</li>
+            <li><i class="fas fa-circle"></i> Must display server logo and Discord link in stream</li>
             <li><i class="fas fa-circle"></i> No negative talk about other servers</li>
             <li><i class="fas fa-circle"></i> Admins may watch stream for compliance</li>
             <li><i class="fas fa-circle"></i> No stream sniping / OOC leaks</li>
           </ul>
-          <div class="badge"><i class="fas fa-bell"></i> Can auto-post announcements to Discord</div>
         </div>
       </div>
     </section>
@@ -1076,7 +812,7 @@
     <section id="page-commands" class="page">
       <div class="page-title">
         <h1>⌨️ City Commands</h1>
-        <p>Essential shortcuts for all players (demo content).</p>
+        <p>Essential shortcuts for all players</p>
       </div>
 
       <div class="commands-grid">
@@ -1085,414 +821,60 @@
         <div class="command-item"><code>/bank</code><p>Check bank</p></div>
         <div class="command-item"><code>/givekey</code><p>Give car keys</p></div>
         <div class="command-item"><code>/givecash</code><p>Give money</p></div>
-        <div class="command-item"><code>/mask</code><p>Mask on/off</p></div>
+        <div class="command-item"><code>/hat</code><p>Hat on/off</p></div>
+        <div class="command-item"><code>/enter</code><p>Enter house</p></div>
         <div class="command-item"><code>/job</code><p>Check job</p></div>
+        <div class="command-item"><code>/mask</code><p>Mask on/off</p></div>
+        <div class="command-item"><code>/ring</code><p>Ring doorbell</p></div>
+        <div class="command-item"><code>/motor</code><p>Engine on/off</p></div>
         <div class="command-item"><code>/report</code><p>Report player</p></div>
         <div class="command-item"><code>/gang</code><p>Gang name</p></div>
         <div class="command-item"><code>/17</code><p>Call police</p></div>
         <div class="command-item"><code>/14</code><p>Call EMS</p></div>
-        <div class="command-item"><code>/ooc</code><p>Out of character</p></div>
       </div>
     </section>
 
-    <section id="page-staff" class="page">
-      <div class="page-title">
-        <h1>🛡️ Staff Team</h1>
-        <p>Demo staff cards — can be synced with Discord roles.</p>
-      </div>
-
-      <div class="grid-4">
-        <div class="profile-card">
-          <div class="profile-top">
-            <div class="avatar">AS</div>
-            <div>
-              <div class="pname">OwnerName</div>
-              <div class="prole">Server Owner</div>
-            </div>
-          </div>
-          <p style="color:var(--text-gray);font-size:14px;">
-            Responsible for vision, scripts, and community rules.
-          </p>
-          <div class="badge"><i class="fas fa-crown"></i> Full Access</div>
+    <div class="modal" id="trailerModal">
+      <div class="modal-card">
+        <div class="modal-top">
+          <div class="modal-title"><i class="fas fa-film" style="color:var(--primary)"></i> Server Trailer</div>
+          <button class="close-x" onclick="closeModal('trailerModal')"><i class="fas fa-xmark"></i></button>
         </div>
 
-        <div class="profile-card">
-          <div class="profile-top">
-            <div class="avatar">AD</div>
-            <div>
-              <div class="pname">AdminName</div>
-              <div class="prole">Administrator</div>
-            </div>
-          </div>
-          <p style="color:var(--text-gray);font-size:14px;">
-            Handles reports, tickets, bans, and support.
-          </p>
-          <div class="badge"><i class="fas fa-gavel"></i> Moderation</div>
-        </div>
-
-        <div class="profile-card">
-          <div class="profile-top">
-            <div class="avatar">MD</div>
-            <div>
-              <div class="pname">ModName</div>
-              <div class="prole">Moderator</div>
-            </div>
-          </div>
-          <p style="color:var(--text-gray);font-size:14px;">
-            Helps with Discord, warns players, and enforces RP rules.
-          </p>
-          <div class="badge"><i class="fas fa-shield"></i> Support</div>
-        </div>
-
-        <div class="profile-card">
-          <div class="profile-top">
-            <div class="avatar">DV</div>
-            <div>
-              <div class="pname">DevName</div>
-              <div class="prole">Developer</div>
-            </div>
-          </div>
-          <p style="color:var(--text-gray);font-size:14px;">
-            Scripts, optimization, and future integrations.
-          </p>
-          <div class="badge"><i class="fas fa-code"></i> Development</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="page-apply" class="page">
-      <div class="page-title">
-        <h1>📝 Application</h1>
-        <p>Demo application UI — can send to Discord webhook.</p>
-      </div>
-
-      <div class="form-wrap">
-        <h3 style="font-weight:900;display:flex;gap:10px;align-items:center;">
-          <i class="fas fa-file-signature" style="color:var(--primary)"></i> Apply Form (Demo)
-        </h3>
-        <p style="color:var(--text-gray);font-size:14px;margin-top:6px;">
-          This is frontend only. When connected, it can auto-send applications to Discord (ticket / channel) or save in database.
-        </p>
-
-        <div class="form-grid">
-          <div class="field">
-            <label>Discord Username</label>
-            <input type="text" placeholder="ex: user#0001">
-          </div>
-
-          <div class="field">
-            <label>FiveM Name</label>
-            <input type="text" placeholder="ex: John RP">
-          </div>
-
-          <div class="field">
-            <label>Age</label>
-            <input type="number" placeholder="18">
-          </div>
-
-          <div class="field">
-            <label>Apply For</label>
-            <select>
-              <option>Whitelist</option>
-              <option>Staff</option>
-              <option>Gang</option>
-              <option>Streamer</option>
-            </select>
-          </div>
-
-          <div class="field" style="grid-column:1/-1;">
-            <label>Why should we accept you?</label>
-            <textarea placeholder="Write your answer..."></textarea>
-          </div>
-        </div>
-
-        <div class="form-actions">
-          <button class="submit-btn" onclick="toast('Application sent (demo) ✅')">Submit</button>
-          <button class="ghost-btn" onclick="toast('Saved draft (demo) 📝')">Save Draft</button>
-          <button class="ghost-btn" onclick="openModal('discordLoginModal')"><i class="fab fa-discord"></i> Login to Auto-Fill</button>
-        </div>
-
-        <div class="hint">
-          Tip: You can connect this form to Discord Webhook (so staff receives applications instantly).
-        </div>
-      </div>
-    </section>
-
-    <section id="page-store" class="page">
-      <div class="page-title">
-        <h1>🛒 Store</h1>
-        <p>Demo store UI — can connect to Tebex / Stripe + auto Discord roles.</p>
-      </div>
-
-      <div class="grid-4">
-        <div class="profile-card">
-          <div class="profile-top">
-            <div class="avatar"><i class="fas fa-gem"></i></div>
-            <div>
-              <div class="pname">VIP Bronze</div>
-              <div class="prole">Starter Perks</div>
-            </div>
-          </div>
-          <p style="color:var(--text-gray);font-size:14px;">
-            Small starter perks, priority queue, special tag.
-          </p>
-          <div class="price">$4.99</div>
-          <button class="buy-btn" onclick="toast('Checkout (demo) 🧾')"><i class="fas fa-credit-card"></i> Buy</button>
-        </div>
-
-        <div class="profile-card">
-          <div class="profile-top">
-            <div class="avatar"><i class="fas fa-gem"></i></div>
-            <div>
-              <div class="pname">VIP Silver</div>
-              <div class="prole">More Perks</div>
-            </div>
-          </div>
-          <p style="color:var(--text-gray);font-size:14px;">
-            Better perks, bigger tag, extra benefits.
-          </p>
-          <div class="price">$9.99</div>
-          <button class="buy-btn" onclick="toast('Checkout (demo) 🧾')"><i class="fas fa-credit-card"></i> Buy</button>
-        </div>
-
-        <div class="profile-card">
-          <div class="profile-top">
-            <div class="avatar"><i class="fas fa-crown"></i></div>
-            <div>
-              <div class="pname">VIP Gold</div>
-              <div class="prole">Premium</div>
-            </div>
-          </div>
-          <p style="color:var(--text-gray);font-size:14px;">
-            Premium perks, priority support, premium tag.
-          </p>
-          <div class="price">$19.99</div>
-          <button class="buy-btn" onclick="toast('Checkout (demo) 🧾')"><i class="fas fa-credit-card"></i> Buy</button>
-        </div>
-
-        <div class="profile-card">
-          <div class="profile-top">
-            <div class="avatar"><i class="fas fa-car"></i></div>
-            <div>
-              <div class="pname">Custom Vehicle</div>
-              <div class="prole">One-time</div>
-            </div>
-          </div>
-          <p style="color:var(--text-gray);font-size:14px;">
-            One custom vehicle (subject to rules).
-          </p>
-          <div class="price">$14.99</div>
-          <button class="buy-btn" onclick="toast('Request sent (demo) 🚗')"><i class="fas fa-paper-plane"></i> Request</button>
-        </div>
-      </div>
-    </section>
-
-    <section id="page-dashboard" class="page">
-      <div class="page-title">
-        <h1>📊 Player Dashboard</h1>
-        <p>Demo dashboard UI — connects to Discord login + database.</p>
-      </div>
-
-      <div class="dash">
-        <div class="dash-col">
-          <div class="widget">
-            <h3><i class="fas fa-user"></i> Profile (Demo)</h3>
-            <div class="kpi-row">
-              <div class="kpi"><div class="k">Discord</div><div class="v" id="dashDiscord">Not Logged</div></div>
-              <div class="kpi"><div class="k">Whitelist</div><div class="v" id="dashWL">No</div></div>
-              <div class="kpi"><div class="k">Playtime</div><div class="v">18h</div></div>
-            </div>
-            <div class="badge"><i class="fab fa-discord"></i> Login enables auto-sync</div>
-          </div>
-
-          <div class="widget">
-            <h3><i class="fas fa-sack-dollar"></i> Economy Snapshot</h3>
-            <div class="kpi-row">
-              <div class="kpi"><div class="k">Cash</div><div class="v">$2,450</div></div>
-              <div class="kpi"><div class="k">Bank</div><div class="v">$19,300</div></div>
-              <div class="kpi"><div class="k">Job</div><div class="v">Mechanic</div></div>
-            </div>
-          </div>
-
-          <div class="widget">
-            <h3><i class="fas fa-scroll"></i> Recent Tickets / Reports</h3>
-            <div class="timeline">
-              <div class="event">
-                <div class="eicon"><i class="fas fa-ticket"></i></div>
-                <div>
-                  <div class="etitle">Ticket #1023</div>
-                  <div class="edesc">Issue: Lost vehicle after restart (demo)</div>
-                </div>
-              </div>
-              <div class="event">
-                <div class="eicon"><i class="fas fa-flag"></i></div>
-                <div>
-                  <div class="etitle">Report #551</div>
-                  <div class="edesc">Report: VDM in city (demo)</div>
-                </div>
-              </div>
-              <div class="event">
-                <div class="eicon"><i class="fas fa-circle-check"></i></div>
-                <div>
-                  <div class="etitle">Resolved</div>
-                  <div class="edesc">Staff closed ticket (demo)</div>
-                </div>
-              </div>
-            </div>
-            <div class="badge"><i class="fas fa-link"></i> Can connect to Discord tickets</div>
-          </div>
-        </div>
-
-        <div class="dash-col">
-          <div class="widget">
-            <h3><i class="fas fa-signal"></i> Server Live (Demo)</h3>
-            <ul class="rule-list">
-              <li><i class="fas fa-circle"></i> Status: <strong>Online</strong></li>
-              <li><i class="fas fa-circle"></i> Players: <strong id="dashPlayers">84/128</strong></li>
-              <li><i class="fas fa-circle"></i> Restart: <strong>In 2h</strong></li>
-              <li><i class="fas fa-circle"></i> Ping: <strong id="dashPing">32ms</strong></li>
-            </ul>
-            <button class="buy-btn" onclick="toast('Open txAdmin (demo) ⚙️')"><i class="fas fa-gear"></i> Open Panel</button>
-          </div>
-
-          <div class="widget">
-            <h3><i class="fas fa-id-card"></i> Characters (Demo)</h3>
-            <ul class="rule-list">
-              <li><i class="fas fa-user"></i> John Carter — <strong>Mechanic</strong></li>
-              <li><i class="fas fa-user"></i> Yacine DZ — <strong>Taxi</strong></li>
-              <li><i class="fas fa-user"></i> Karim RP — <strong>Unemployed</strong></li>
-            </ul>
-          </div>
-
-          <div class="widget">
-            <h3><i class="fas fa-star"></i> Rewards</h3>
-            <ul class="rule-list">
-              <li><i class="fas fa-gift"></i> Daily bonus available (demo)</li>
-              <li><i class="fas fa-gift"></i> Invite reward: 2/5</li>
-              <li><i class="fas fa-gift"></i> VIP discount (demo)</li>
-            </ul>
-            <button class="buy-btn" onclick="toast('Claimed (demo) 🎁')"><i class="fas fa-hand"></i> Claim</button>
+        <div class="modal-body">
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/lWfEBTLbiGE"
+              title="Algerian State Trailer"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
           </div>
         </div>
       </div>
-    </section>
-
-    <section id="page-faq" class="page">
-      <div class="page-title">
-        <h1>❓ FAQ</h1>
-        <p>Frequently asked questions (demo).</p>
-      </div>
-
-      <div class="faq">
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            <span>How do I join the server?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-a">
-            Join Discord first, then use the connect command or FiveM server list. (Can be upgraded with step-by-step join page.)
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            <span>Do you have whitelist?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-a">
-            Yes (example). The website can show whitelist status automatically via Discord roles.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            <span>Can I login with Discord?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-a">
-            Yes, OAuth2 login. This demo includes a modal. Real integration can be added with backend.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            <span>Can the website show live server status?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-a">
-            Yes. It can use FiveM endpoints / API, or a small backend that checks server status and player count.
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
 
     <footer>
       <div class="footer-content">
         <div class="footer-links">
           <a href="#" onclick="showPage('home', findNavBtn('home'))">Home</a>
-          <a href="#" onclick="showPage('faq', findNavBtn('faq'))">FAQ</a>
+          <a href="#" onclick="showPage('roleplay', findNavBtn('roleplay'))">Rules</a>
           <a href="https://discord.gg/2KQSrDYEGE" target="_blank">Discord</a>
-          <a href="#" onclick="showPage('store', findNavBtn('store'))">Store</a>
-          <a href="#" onclick="showPage('apply', findNavBtn('apply'))">Apply</a>
+          <a href="#" onclick="joinServer()">Join Server</a>
         </div>
 
         <div class="social-icons">
           <a href="https://discord.gg/2KQSrDYEGE" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
-          <a href="https://www.youtube.com/@AlgerianStateRolePlay_5.1" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
           <a href="#" aria-label="Twitch"><i class="fab fa-twitch"></i></a>
           <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
 
       <div class="copyright">
-        © 2026 Algerian State Roleplay. All rights reserved. | Demo by souy
+        © 2026 Algerian State Roleplay. All rights reserved.
       </div>
     </footer>
-  </div>
-
-  <div class="modal" id="discordLoginModal">
-    <div class="modal-card">
-      <div class="modal-top">
-        <div class="modal-title"><i class="fab fa-discord" style="color:var(--discord)"></i> Discord Login (Demo)</div>
-        <button class="close-x" onclick="closeModal('discordLoginModal')"><i class="fas fa-xmark"></i></button>
-      </div>
-
-      <div class="modal-body">
-        <p>
-          This is a demo login UI. In real setup, clicking authorize would redirect to Discord OAuth2.
-          After login, we can read your Discord ID + roles and show your whitelist status on the website.
-        </p>
-
-        <div class="modal-actions">
-          <button class="cta cta-discord btn-wide" onclick="demoDiscordLogin()">
-            <i class="fab fa-discord"></i> Authorize (Demo)
-          </button>
-          <button class="cta cta-secondary btn-wide" onclick="closeModal('discordLoginModal')">
-            <i class="fas fa-arrow-left"></i> Cancel
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-    <div class="modal" id="trailerModal">
-    <div class="modal-card" style="max-width: 560px;">
-      <div class="modal-top">
-        <div class="modal-title"><i class="fas fa-film" style="color:var(--primary)"></i> Server Trailer</div>
-        <button class="close-x" onclick="closeModal('trailerModal')"><i class="fas fa-xmark"></i></button>
-      </div>
-
-      <div class="modal-body" style="text-align: center; padding: 30px 20px;">
-        <i class="fab fa-youtube" style="font-size: 80px; color: #ff0000; margin-bottom: 20px;"></i>
-        <p style="color: var(--text-gray); margin-bottom: 25px;">
-          The video cannot be embedded due to YouTube restrictions.<br>
-          Click below to watch directly on YouTube.
-        </p>
-        <a href="https://www.youtube.com/watch?v=lWfEBTLbiGE" target="_blank" class="cta cta-discord" style="text-decoration: none; display: inline-flex;">
-          <i class="fab fa-youtube"></i> Watch on YouTube
-        </a>
-      </div>
-    </div>
   </div>
 
   <div id="toast" style="
@@ -1526,43 +908,15 @@
       return document.querySelector('.nav-btn[data-page="' + pageName + '"]');
     }
 
-    function animateNumber(el, target, suffix = "") {
-      let current = 0;
-      const steps = 80;
-      const inc = target / steps;
-      const timer = setInterval(() => {
-        current += inc;
-        if (current >= target) {
-          current = target;
-          clearInterval(timer);
-        }
-        el.textContent = Math.floor(current) + suffix;
-      }, 18);
-    }
-
-    function initCounters() {
-      animateNumber(document.getElementById("statPlayers"), 120, "+");
-      animateNumber(document.getElementById("statScripts"), 14, "+");
-      animateNumber(document.getElementById("statStaff"), 24, "/7");
-    }
-
-    function initFakeServerStatus() {
-      setInterval(() => {
-        const ping = Math.floor(22 + Math.random() * 38);
-        document.getElementById("serverPing").textContent = ping + "ms";
-        document.getElementById("dashPing").textContent = ping + "ms";
-      }, 2500);
-
-      setInterval(() => {
-        const players = Math.floor(65 + Math.random() * 40);
-        document.getElementById("dashPlayers").textContent = players + "/128";
-      }, 3200);
+    function joinServer() {
+      window.location.href = "fivem://connect/jjgk3l";
     }
 
     function openModal(id) {
       const m = document.getElementById(id);
       if (m) m.classList.add("open");
     }
+    
     function closeModal(id) {
       const m = document.getElementById(id);
       if (m) m.classList.remove("open");
@@ -1573,47 +927,31 @@
       if (openModalEl) openModalEl.classList.remove("open");
     });
 
-    function toggleFaq(headerEl) {
-      const item = headerEl.closest(".faq-item");
-      if (!item) return;
-      item.classList.toggle("open");
-    }
-
-    let toastTimer = null;
-    function toast(msg) {
-      const t = document.getElementById("toast");
-      t.textContent = msg;
-      t.style.display = "block";
-      if (toastTimer) clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => {
-        t.style.display = "none";
-      }, 2200);
-    }
-
-    function copyConnect() {
-      const text = document.getElementById("connectString").textContent.trim();
-      navigator.clipboard.writeText(text)
-        .then(() => toast("Copied: " + text + " ✅"))
-        .catch(() => toast("Copy failed (browser blocked) ❌"));
-    }
-
-    function demoDiscordLogin() {
-      document.getElementById("dashDiscord").textContent = "souy";
-      document.getElementById("dashWL").textContent = "Yes";
-      toast("Logged in as souy (demo) ✅");
-      closeModal("discordLoginModal");
-    }
-
-    window.addEventListener("load", () => {
-      initCounters();
-      initFakeServerStatus();
-    });
-
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
         document.querySelectorAll(".modal.open").forEach(m => m.classList.remove("open"));
       }
     });
+
+    async function fetchServerInfo() {
+      try {
+        const response = await fetch('https://servers-frontend.fivem.net/api/servers/single/jjgk3l');
+        const data = await response.json();
+        const players = data.Data.players.length;
+        const maxPlayers = data.Data.sv_maxclients;
+        
+        document.getElementById("serverPlayers").textContent = `${players}/${maxPlayers}`;
+        document.getElementById("statPlayers").textContent = players;
+        
+        const pingEl = document.getElementById("serverPing");
+        if (pingEl) pingEl.textContent = "32ms";
+      } catch (error) {
+        console.log("Could not fetch server data");
+      }
+    }
+
+    fetchServerInfo();
+    setInterval(fetchServerInfo, 30000);
   </script>
 </body>
 </html>
