@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Algerian State | FiveM Server</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body { height: 100%; }
     body {
-      font-family: "Poppins", sans-serif;
+      font-family: "Cairo", "Poppins", sans-serif;
       background: #0a0a0f;
       color: #fff;
       line-height: 1.6;
@@ -245,6 +245,8 @@
       color: var(--text-gray);
       font-size: 14.5px;
       line-height: 1.5;
+      text-align: right;
+      direction: rtl;
     }
     .rule-list li i { color: var(--primary); margin-top: 4px; font-size: 13px; }
     .rule-list strong { color: var(--primary); font-weight: 700; }
@@ -498,6 +500,11 @@
     }
     .video-wrap iframe { width: 100%; height: 100%; border: 0; }
 
+    .arabic-text {
+      direction: rtl;
+      text-align: right;
+    }
+
     @media (max-width: 980px) {
       header { flex-direction: column; border-radius: 26px; padding: 18px; }
       .logo-area, .header-actions { width: 100%; justify-content: center; }
@@ -539,8 +546,8 @@
         <button class="nav-btn active" data-page="home" onclick="showPage('home', this)"><i class="fas fa-home"></i> Home</button>
         <button class="nav-btn" data-page="roleplay" onclick="showPage('roleplay', this)"><i class="fas fa-book"></i> Roleplay</button>
         <button class="nav-btn" data-page="illegal" onclick="showPage('illegal', this)"><i class="fas fa-skull"></i> Illegal</button>
-        <button class="nav-btn" data-page="robbery" onclick="showPage('robbery', this)"><i class="fas fa-money-bill"></i> Robbery</button>
-        <button class="nav-btn" data-page="stream" onclick="showPage('stream', this)"><i class="fas fa-video"></i> Stream</button>
+        <button class="nav-btn" data-page="terminology" onclick="showPage('terminology', this)"><i class="fas fa-language"></i> Terminology</button>
+        <button class="nav-btn" data-page="discord-rules" onclick="showPage('discord-rules', this)"><i class="fab fa-discord"></i> Discord</button>
         <button class="nav-btn" data-page="commands" onclick="showPage('commands', this)"><i class="fas fa-terminal"></i> Commands</button>
       </div>
 
@@ -638,47 +645,53 @@
 
     <section id="page-roleplay" class="page">
       <div class="page-title">
-        <h1>📖 Roleplay Terms & Rules</h1>
-        <p>Essential terminology for quality roleplay</p>
+        <h1>📜 Roleplay Rules</h1>
+        <p>قوانين الرول بلاي الأساسية</p>
       </div>
 
       <div class="rules-grid">
         <div class="rule-card glass">
           <div class="card-header">
-            <i class="fas fa-graduation-cap"></i>
-            <h2>Basic Terms</h2>
+            <i class="fas fa-mask"></i>
+            <h2>General Rules</h2>
           </div>
           <ul class="rule-list">
-            <li><i class="fas fa-circle"></i> <strong>Role Play:</strong> playing a character in a fictional world</li>
-            <li><i class="fas fa-circle"></i> <strong>Meta Gaming:</strong> using OOC info in-game</li>
-            <li><i class="fas fa-circle"></i> <strong>Power Gaming:</strong> unrealistic actions (no fear/pain)</li>
-            <li><i class="fas fa-circle"></i> <strong>Bunny Jump:</strong> spamming jump to gain advantage</li>
-          </ul>
-        </div>
-
-        <div class="rule-card glass">
-          <div class="card-header">
-            <i class="fas fa-triangle-exclamation"></i>
-            <h2>Important Rules</h2>
-          </div>
-          <ul class="rule-list">
-            <li><i class="fas fa-circle"></i> <strong>New Life Rule:</strong> after death you forget the event</li>
-            <li><i class="fas fa-circle"></i> <strong>Fairplay:</strong> no abusing mechanics</li>
-            <li><i class="fas fa-circle"></i> <strong>Pain RP:</strong> act injuries realistically</li>
-            <li><i class="fas fa-circle"></i> <strong>Mass RP:</strong> behave as if NPCs exist</li>
+            <li><i class="fas fa-circle"></i> <strong>Role Play:</strong> يجب عليك تقمص الشخصية داخل الرول بلاي</li>
+            <li><i class="fas fa-circle"></i> <strong>Meta Gaming:</strong> يمنع استخدام المعلومات المتحصل عليها خارج الرول بلاي</li>
+            <li><i class="fas fa-circle"></i> <strong>Free-Kill (RDM):</strong> يمنع القتل العمدي بدون سبب</li>
+            <li><i class="fas fa-circle"></i> <strong>Car-Kill (VDM):</strong> يمنع دهس المواطنين بالسيارة</li>
+            <li><i class="fas fa-circle"></i> <strong>Bunny Jump:</strong> يمنع القفز بشكل متكرر للتقدم بشكل أسرع</li>
+            <li><i class="fas fa-circle"></i> <strong>New Life Rules:</strong> في حال دخولك في غيبوبة يجب نسيان من 10 الى 20 دقيقة</li>
+            <li><i class="fas fa-circle"></i> <strong>Fairplay:</strong> التحلي بالروح الرياضية</li>
           </ul>
         </div>
 
         <div class="rule-card glass">
           <div class="card-header">
             <i class="fas fa-ban"></i>
-            <h2>Prohibited</h2>
+            <h2>Prohibited Actions</h2>
           </div>
           <ul class="rule-list">
-            <li><i class="fas fa-times-circle"></i> <strong>Revenge Kill:</strong> kill after you died to the same person</li>
-            <li><i class="fas fa-times-circle"></i> <strong>Force RP:</strong> forcing without realistic chance</li>
-            <li><i class="fas fa-times-circle"></i> <strong>Stream Snipe:</strong> using stream info</li>
-            <li><i class="fas fa-times-circle"></i> <strong>Combat Log:</strong> leaving to avoid RP</li>
+            <li><i class="fas fa-circle"></i> <strong>Fuir RP:</strong> يمنع الخروج من السيرفر عمداً للهروب من السيناريو</li>
+            <li><i class="fas fa-circle"></i> <strong>HRP:</strong> يمنع التكلم خارج الرول بلاي أو استعمال مصطلحات خارجة</li>
+            <li><i class="fas fa-circle"></i> <strong>Mort-RP:</strong> الموت النهائي لشخصيتك يجبرك على إنشاء شخصية جديدة</li>
+            <li><i class="fas fa-circle"></i> <strong>Pain RP:</strong> يجب التظاهر بالألم عند التعرض لحادث أو ضرب</li>
+            <li><i class="fas fa-circle"></i> <strong>Force-RP:</strong> يمنع إجبار شخص على قبول شروطك دون سماع شروطه</li>
+            <li><i class="fas fa-circle"></i> <strong>Revenge-Kill:</strong> يمنع الانتقام من شخص قام بقتلك سابقاً</li>
+          </ul>
+        </div>
+
+        <div class="rule-card glass">
+          <div class="card-header">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h2>Important Rules</h2>
+          </div>
+          <ul class="rule-list">
+            <li><i class="fas fa-circle"></i> <strong>Power Gaming:</strong> يمنع القيام بأفعال خارقة لا يمكن حدوثها بالواقع</li>
+            <li><i class="fas fa-circle"></i> <strong>Masse-RP:</strong> يجب أن تأخذ بعين الاعتبار وجود سكان</li>
+            <li><i class="fas fa-circle"></i> <strong>HELP:</strong> يمنع طلب مدني للإسعاف في حال وجود المسعفين</li>
+            <li><i class="fas fa-circle"></i> <strong>Record:</strong> يجب تشغيل برنامج تصوير مع الصوت أثناء اللعب (10 دقائق)</li>
+            <li><i class="fas fa-circle"></i> <strong>Prohibited items:</strong> يمنع بيع أو شراء الممنوعات في المناطق الآمنة</li>
           </ul>
         </div>
       </div>
@@ -686,124 +699,105 @@
 
     <section id="page-illegal" class="page">
       <div class="page-title">
-        <h1>⚡ Illegal Activities</h1>
-        <p>Gangs, robbery, kidnapping & murder rules</p>
+        <h1>⚡ Illegal Rules</h1>
+        <p>قوانين الأعمال الإجرامية</p>
       </div>
 
       <div class="rules-grid">
         <div class="rule-card glass">
           <div class="card-header">
             <i class="fas fa-mask"></i>
-            <h2>Robbery & Kidnapping</h2>
+            <h2>Crime Rules</h2>
           </div>
           <ul class="rule-list">
-            <li><i class="fas fa-circle"></i> Robbery needs a reason outside safe zone</li>
-            <li><i class="fas fa-circle"></i> Max ransom: <strong>$50,000</strong></li>
-            <li><i class="fas fa-circle"></i> Cannot force someone to ATM</li>
-            <li><i class="fas fa-circle"></i> Cop kidnapping: at least <strong>6 cops online</strong></li>
+            <li><i class="fas fa-circle"></i> يمنع الاتفاق مع اي شخص ليصبح رهينة</li>
+            <li><i class="fas fa-circle"></i> يجب عليك فهم معنى الحياة الواقعية سواء كنت مجرم او رهينة</li>
+            <li><i class="fas fa-circle"></i> يمنع تجارة الممنوعات في المناطق الامنة</li>
+            <li><i class="fas fa-circle"></i> يمنع تحالف العصابات ضد الشرطة او ضد عصابة اخرى</li>
+            <li><i class="fas fa-circle"></i> يمنع مقاومة السلاح الناري بسلاح ابيض</li>
+            <li><i class="fas fa-circle"></i> يمنع خطف الشرطي في اي قضية مرورية</li>
           </ul>
         </div>
 
         <div class="rule-card glass">
           <div class="card-header">
             <i class="fas fa-users"></i>
-            <h2>Gang Rules</h2>
+            <h2>Gang & Hostage Rules</h2>
           </div>
           <ul class="rule-list">
-            <li><i class="fas fa-circle"></i> Max <strong>10 per gang</strong>, 15 for mafia</li>
-            <li><i class="fas fa-circle"></i> No alliances between gangs</li>
-            <li><i class="fas fa-circle"></i> <strong>30min cooldown</strong> between illegal acts</li>
-            <li><i class="fas fa-circle"></i> No illegal activity in safe zones</li>
+            <li><i class="fas fa-circle"></i> يمنع منعاً باتاً مشاركة الرهينة للخاطفين في نص السيناريو</li>
+            <li><i class="fas fa-circle"></i> يمنع لبس ملابس العصابات</li>
+            <li><i class="fas fa-circle"></i> يمنع على المجرمين السرقة و الهروب في السرقات عدا (سرقة البقالة و المنزل) يحق لهم الهروب قبل قدوم الشرطة</li>
+            <li><i class="fas fa-circle"></i> يحق لك طلب مبلغ مالي على الرهينة</li>
+            <li><i class="fas fa-circle"></i> يجب عليك التخطيط جيدا قبل السرقة</li>
+            <li><i class="fas fa-circle"></i> الحد الاعلى للرهائن هو 2 و يمنع الزيادة</li>
           </ul>
         </div>
 
         <div class="rule-card glass">
           <div class="card-header">
-            <i class="fas fa-truck"></i>
-            <h2>Drug Transport</h2>
+            <i class="fas fa-exclamation"></i>
+            <h2>Additional Rules</h2>
           </div>
           <ul class="rule-list">
-            <li><i class="fas fa-circle"></i> Max <strong>3 vans</strong>, no sports cars</li>
-            <li><i class="fas fa-circle"></i> Max <strong>6 vehicles</strong> total</li>
-            <li><i class="fas fa-circle"></i> Negotiation required for attacks</li>
-          </ul>
-        </div>
-
-        <div class="rule-card glass">
-          <div class="card-header">
-            <i class="fas fa-fort-awesome"></i>
-            <h2>Raid Rules</h2>
-          </div>
-          <ul class="rule-list">
-            <li><i class="fas fa-circle"></i> Must have strong RP reason</li>
-            <li><i class="fas fa-circle"></i> Winners can <strong>loot everything</strong></li>
-            <li><i class="fas fa-circle"></i> Once per month per gang</li>
-            <li><i class="fas fa-circle"></i> Pay <strong>$200k-400k</strong> to avoid</li>
+            <li><i class="fas fa-circle"></i> يمنع الفايت بدون سبب و قد تحاسب محاسبة ادارية</li>
+            <li><i class="fas fa-circle"></i> يمنع خطف اي شخص يعمل في وظيفة حكومية (سائق اجرة. عامل نظافة. مسعف...)</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="page-robbery" class="page">
+    <section id="page-terminology" class="page">
       <div class="page-title">
-        <h1>💰 Heists & Robberies</h1>
-        <p>Specific requirements for each heist</p>
-      </div>
-
-      <div class="rules-grid">
-        <div class="rule-card glass">
-          <div class="card-header"><i class="fas fa-store"></i><h2>Gas Station / House</h2></div>
-          <ul class="rule-list">
-            <li><i class="fas fa-circle"></i> Max <strong>2 people</strong></li>
-            <li><i class="fas fa-circle"></i> <strong>1 vehicle</strong> only</li>
-            <li><i class="fas fa-circle"></i> <strong>15min cooldown</strong></li>
-          </ul>
-        </div>
-
-        <div class="rule-card glass">
-          <div class="card-header"><i class="fas fa-gem"></i><h2>Jewelry Store</h2></div>
-          <ul class="rule-list">
-            <li><i class="fas fa-circle"></i> Exactly <strong>4 people</strong></li>
-            <li><i class="fas fa-circle"></i> Max <strong>2 hostages</strong></li>
-            <li><i class="fas fa-circle"></i> <strong>1 vehicle</strong> only</li>
-          </ul>
-        </div>
-
-        <div class="rule-card glass">
-          <div class="card-header"><i class="fas fa-university"></i><h2>Fleeca Bank</h2></div>
-          <ul class="rule-list">
-            <li><i class="fas fa-circle"></i> Exactly <strong>3 people</strong></li>
-            <li><i class="fas fa-circle"></i> Max <strong>2 hostages</strong></li>
-            <li><i class="fas fa-circle"></i> <strong>1 vehicle</strong></li>
-          </ul>
-        </div>
-
-        <div class="rule-card glass">
-          <div class="card-header"><i class="fas fa-landmark"></i><h2>Pacific Bank</h2></div>
-          <ul class="rule-list">
-            <li><i class="fas fa-circle"></i> <strong>6-8 people</strong></li>
-            <li><i class="fas fa-circle"></i> Weapons: <strong>Combat PDW</strong></li>
-            <li><i class="fas fa-circle"></i> <strong>1-3 hostages</strong></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="page-stream" class="page">
-      <div class="page-title">
-        <h1>🎥 Streamer Rules</h1>
-        <p>Guidelines for content creators</p>
+        <h1>📋 Server Terminology</h1>
+        <p>المصطلحات المستخدمة في السيرفر</p>
       </div>
 
       <div class="rules-grid">
         <div class="rule-card glass" style="grid-column: 1 / -1;">
-          <div class="card-header"><i class="fas fa-stream"></i><h2>Streamer Guidelines</h2></div>
+          <div class="card-header">
+            <i class="fas fa-language"></i>
+            <h2>Terminology</h2>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+            <ul class="rule-list">
+              <li><i class="fas fa-circle"></i> <strong>LAG:</strong> صداع</li>
+              <li><i class="fas fa-circle"></i> <strong>Microphone:</strong> حنجرة</li>
+              <li><i class="fas fa-circle"></i> <strong>Server:</strong> المدينة</li>
+              <li><i class="fas fa-circle"></i> <strong>Glitch:</strong> سحر</li>
+              <li><i class="fas fa-circle"></i> <strong>Discord:</strong> راديو</li>
+            </ul>
+            <ul class="rule-list">
+              <li><i class="fas fa-circle"></i> <strong>Button:</strong> عضلة</li>
+              <li><i class="fas fa-circle"></i> <strong>Disconnect:</strong> نفصل مخي</li>
+              <li><i class="fas fa-circle"></i> <strong>ID:</strong> CCP</li>
+              <li><i class="fas fa-circle"></i> <strong>BAN:</strong> عمرة</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="page-discord-rules" class="page">
+      <div class="page-title">
+        <h1>📜 Discord Rules</h1>
+        <p>قوانين الديسكورد</p>
+      </div>
+
+      <div class="rules-grid">
+        <div class="rule-card glass" style="grid-column: 1 / -1;">
+          <div class="card-header">
+            <i class="fab fa-discord"></i>
+            <h2>Discord Guidelines</h2>
+          </div>
           <ul class="rule-list">
-            <li><i class="fas fa-circle"></i> You represent the server — avoid toxicity</li>
-            <li><i class="fas fa-circle"></i> Must display server logo and Discord link in stream</li>
-            <li><i class="fas fa-circle"></i> No negative talk about other servers</li>
-            <li><i class="fas fa-circle"></i> Admins may watch stream for compliance</li>
-            <li><i class="fas fa-circle"></i> No stream sniping / OOC leaks</li>
+            <li><i class="fas fa-circle"></i> يجب احترام جميع الأعضاء و الإدارة. أي سلوك غير لائق سوف يتم محاسبتك</li>
+            <li><i class="fas fa-circle"></i> يجب استخدام أسماء وصور شخصية مناسبة. أي انتهاك سيؤدي إلى الطرد</li>
+            <li><i class="fas fa-circle"></i> يمنع التطرق للمواضيع الدينية أو السياسية بأي شكل من الاشكال</li>
+            <li><i class="fas fa-circle"></i> يرجى تجنب تكرار الرسائل المتشابهة. سيؤدي ذلك إلى محاسبتك</li>
+            <li><i class="fas fa-circle"></i> عدم الاستفسار في الشات العام. هناك روم مخصص للاستفسارات</li>
+            <li><i class="fas fa-circle"></i> يمنع نشر الروابط بأي شكل من الاشكال</li>
+            <li><i class="fas fa-circle"></i> يمنع التنقيط في الشات العام</li>
           </ul>
         </div>
       </div>
@@ -826,11 +820,9 @@
         <div class="command-item"><code>/job</code><p>Check job</p></div>
         <div class="command-item"><code>/mask</code><p>Mask on/off</p></div>
         <div class="command-item"><code>/ring</code><p>Ring doorbell</p></div>
-        <div class="command-item"><code>/motor</code><p>Engine on/off</p></div>
         <div class="command-item"><code>/report</code><p>Report player</p></div>
         <div class="command-item"><code>/gang</code><p>Gang name</p></div>
-        <div class="command-item"><code>/17</code><p>Call police</p></div>
-        <div class="command-item"><code>/14</code><p>Call EMS</p></div>
+        <div class="command-item"><code>/h14</code><p>Call EMS</p></div>
       </div>
     </section>
 
